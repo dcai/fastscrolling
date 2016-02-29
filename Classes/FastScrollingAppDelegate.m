@@ -13,16 +13,13 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
-	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-	RootViewController *viewController = [[RootViewController alloc] init];
-	navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-	[viewController release];
-	
-	[window addSubview:[navigationController view]];
-	[window makeKeyAndVisible];
+    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    RootViewController *viewController = [[RootViewController alloc] init];
+    navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [window setRootViewController:viewController];
+    [viewController release];
+    [window makeKeyAndVisible];
 }
-
 - (void)dealloc
 {
 	[navigationController release];

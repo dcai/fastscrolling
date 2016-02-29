@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FastScrollingAppDelegate.h"
+
 
 int main(int argc, char *argv[])
 {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, @"FastScrollingAppDelegate");
+    int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([FastScrollingAppDelegate class]));
     [pool release];
     return retVal;
 }
