@@ -46,8 +46,9 @@ static NSString *randomWords[] = {
 	FirstLastExampleTableViewCell *cell = (FirstLastExampleTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if(cell == nil)
 	{
-		cell = [[[FirstLastExampleTableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-	}
+        cell = [[[FirstLastExampleTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                       reuseIdentifier:CellIdentifier] autorelease];
+    }
 
 	cell.firstText = randomWords[indexPath.row % N_RANDOM_WORDS];
 	cell.lastText = randomWords[(indexPath.row+1) % N_RANDOM_WORDS];
